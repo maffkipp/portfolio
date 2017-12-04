@@ -1,10 +1,16 @@
 html {
-  background-color: #fafafa; }
+  background-color: #fafafa;
+  padding: 0;
+  margin: 0; }
+
+body {
+  padding: 0;
+  margin: 0; }
 
 .app-title {
   display: inline-block;
-  width: 80%;
-  margin: 0 10%;
+  width: 90%;
+  margin: 0 5%;
   font-size: 50px;
   font-family: "Roboto", sans-serif;
   color: #43A047;
@@ -18,26 +24,71 @@ html {
   .app-navbar .app-navlink {
     padding: 5px 10px 10px;
     margin: 0 3px;
+    font-size: 20px;
     color: #43A047;
     font-family: "Lato", sans-serif;
-    font-size: 20px;
     text-decoration: none;
-    border-radius: 4px;
     transition: color 200ms, background-color 200ms; }
-    .app-navbar .app-navlink:hover, .app-navbar .app-navlink .active {
+    .app-navbar .app-navlink:hover {
       background-color: #43A047;
       color: #fafafa;
       transition: color 200ms, background-color 200ms; }
+  .app-navbar .active {
+    background-color: #43A047;
+    color: #fafafa; }
 
 .about {
   background: linear-gradient(to bottom, #43A047, #fafafa);
   min-height: 300px;
   margin-top: 5px;
-  border-radius: 4px; }
+  padding-top: 5px; }
 
 .about-title {
   font-size: 30px;
-  margin: 0 0 0 50px;
+  margin-left: 5%;
+  font-family: "Roboto", sans-serif;
+  color: #fafafa; }
+
+.about-container {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #fafafa;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
+.about-inner-flexbox {
+  display: flex;
+  align-items: center; }
+
+.about-skills-title {
+  font-family: "Roboto", sans-serif;
+  color: #43A047; }
+
+.about-image {
+  height: 300px;
+  width: 300px;
+  padding: 8px;
+  margin: 20px;
+  background-color: #fafafa;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+
+.about-body {
+  margin: 50px;
+  font-family: "Lato", sans-serif;
+  color: #9e9e9e;
+  line-height: 2;
+  text-transform: italic;
+  font-size: 20px;
+  border-radius: 4px; }
+
+.projects {
+  background: linear-gradient(to bottom, #43A047, #fafafa);
+  min-height: 300px;
+  margin-top: 5px;
+  padding-top: 5px; }
+
+.projects-title {
+  font-size: 30px;
+  margin-left: 5%;
   font-family: "Roboto", sans-serif;
   color: #fafafa; }
 
@@ -45,10 +96,10 @@ html {
   background: linear-gradient(to bottom, #43A047, #fafafa);
   min-height: 300px;
   margin-top: 5px;
-  border-radius: 4px; }
+  padding-top: 5px; }
 
 .contact-title {
   font-size: 30px;
-  margin: 0 0 0 50px;
+  margin-left: 5%;
   font-family: "Roboto", sans-serif;
   color: #fafafa; }
