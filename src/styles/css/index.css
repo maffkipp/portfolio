@@ -10,7 +10,7 @@ body {
 .app-title {
   display: inline-block;
   width: 90%;
-  margin: 0 5%;
+  margin: 0 5% 30px;
   font-size: 50px;
   font-family: "Roboto", sans-serif;
   color: #43A047;
@@ -24,7 +24,7 @@ body {
   .app-navbar .app-navlink {
     padding: 5px 10px 10px;
     margin: 0 3px;
-    font-size: 20px;
+    font-size: 22px;
     color: #43A047;
     font-family: "Lato", sans-serif;
     text-decoration: none;
@@ -40,7 +40,7 @@ body {
 .about {
   background: linear-gradient(to bottom, #43A047, #fafafa);
   min-height: 300px;
-  margin-top: 5px;
+  margin: 5px 0 50px;
   padding-top: 5px; }
 
 .about-title {
@@ -61,7 +61,10 @@ body {
 
 .about-skills-title {
   font-family: "Roboto", sans-serif;
-  color: #43A047; }
+  color: #43A047;
+  font-size: 28px;
+  margin: 20px;
+  display: none; }
 
 .about-image {
   height: 300px;
@@ -76,14 +79,14 @@ body {
   font-family: "Lato", sans-serif;
   color: #9e9e9e;
   line-height: 2;
-  text-transform: italic;
+  font-style: italic;
   font-size: 20px;
   border-radius: 4px; }
 
 .projects {
   background: linear-gradient(to bottom, #43A047, #fafafa);
   min-height: 300px;
-  margin-top: 5px;
+  margin: 5px 0 50px;
   padding-top: 5px; }
 
 .projects-title {
@@ -95,7 +98,7 @@ body {
 .contact {
   background: linear-gradient(to bottom, #43A047, #fafafa);
   min-height: 300px;
-  margin-top: 5px;
+  margin: 5px 0 50px;
   padding-top: 5px; }
 
 .contact-title {
@@ -103,3 +106,21 @@ body {
   margin-left: 5%;
   font-family: "Roboto", sans-serif;
   color: #fafafa; }
+
+.footer {
+  border-top: 1px solid #9e9e9e;
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px 0;
+  text-align: center; }
+
+.footer-link {
+  position: relative;
+  color: #9e9e9e;
+  margin: 20px;
+  transition: border-bottom 200ms, color 200ms, padding-bottom 200ms; }
+  .footer-link:hover {
+    padding-bottom: 2px;
+    border-bottom: 3px solid #43A047;
+    color: #43A047;
+    transition: border-bottom 200ms, color 200ms, padding-bottom 200ms; }

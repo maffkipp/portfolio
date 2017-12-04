@@ -12,7 +12,7 @@ body {
 .app-title {
   display: inline-block;
   width: 90%;
-  margin: 0 5%;
+  margin: 0 5% 30px;
   font-size: 50px;
   font-family: $title-font;
   color: $green;
@@ -28,7 +28,7 @@ body {
   .app-navlink {
     padding: 5px 10px 10px;
     margin: 0 3px;
-    font-size: 20px;
+    font-size: 22px;
     @include link;
   }
   .active {

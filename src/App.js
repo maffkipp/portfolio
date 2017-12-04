@@ -10,6 +10,7 @@ import Home from './components/Home.js';
 import About from './components/About.js';
 import Projects from './components/Projects.js';
 import Contact from './components/Contact.js';
+import Footer from './components/Footer.js';
 
 class App extends Component {
   render() {
@@ -33,6 +34,7 @@ class App extends Component {
             </Switch>
           </div>
         </Router>
+        <Footer />
       </div>
     );
   }

@@ -21,6 +21,9 @@
 .about-skills-title {
   font-family: $title-font;
   color: $green;
+  font-size: 28px;
+  margin: 20px;
+  display: none;
 }
 
 .about-image {
@@ -37,7 +40,7 @@
   font-family: $body-font;
   color: $grey;
   line-height: 2;
-  text-transform: italic;
+  font-style: italic;
   font-size: 20px;
   border-radius: 4px;
 }
