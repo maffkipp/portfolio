@@ -1,0 +1,7 @@
+.about {
+  @include component-background;
+}
+
+.about-title {
+  @include component-title;
+}
