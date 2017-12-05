@@ -4,7 +4,6 @@ class About extends Component {
   render() {
     return (
       <div className='about'>
-        <h2 className='about-title'>About Me</h2>
         <div className='about-container'>
           <div className='about-inner-flexbox'>
             <img  className='about-image'

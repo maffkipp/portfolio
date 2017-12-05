@@ -1,7 +1,15 @@
 .projects {
   @include component-background;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .projects-title {
   @include component-title;
 }
+
+.projects-link {
+  text-decoration: none;
+}
+

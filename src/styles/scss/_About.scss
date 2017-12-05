@@ -10,7 +10,7 @@
   width: 90%;
   margin: 0 auto;
   background-color: $white;
-  @include box-shadow(2);
+  @include box-shadow(3);
 }
 
 .about-inner-flexbox {
@@ -27,12 +27,12 @@
 }
 
 .about-image {
-  height: 300px;
+  height: auto;
   width: 300px;
   padding: 8px;
   margin: 20px;
   background-color: $white;
-  @include box-shadow(1);
+  @include box-shadow(2);
 }
 
 .about-body {

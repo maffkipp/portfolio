@@ -7,24 +7,35 @@ body {
   padding: 0;
   margin: 0; }
 
-.app-title {
+.app-title-container {
   display: inline-block;
   width: 90%;
-  margin: 0 5% 30px;
-  font-size: 50px;
-  font-family: "Roboto", sans-serif;
-  color: #43A047;
-  padding: 30px 0;
+  margin: 0 5% 10px;
   border-bottom: 1px solid #9e9e9e; }
+  .app-title-container .app-title-link {
+    text-decoration: none; }
+  .app-title-container .app-title {
+    font-size: 50px;
+    font-family: "Roboto", sans-serif;
+    color: #43A047;
+    margin: 10px 0 0;
+    padding: 15px 0 0; }
+  .app-title-container .app-subtitle {
+    padding: 0;
+    font-size: 16px;
+    color: #9e9e9e;
+    margin: 0 0 30px 15px;
+    font-family: "Lato", sans-serif;
+    font-style: italic; }
 
 .app-navbar {
   display: block;
   text-align: center;
   padding-top: 20px; }
   .app-navbar .app-navlink {
-    padding: 5px 10px 10px;
+    padding: 5px 20px;
     margin: 0 3px;
-    font-size: 22px;
+    font-size: 26px;
     color: #43A047;
     font-family: "Lato", sans-serif;
     text-decoration: none;
@@ -32,16 +43,20 @@ body {
     .app-navbar .app-navlink:hover {
       background-color: #43A047;
       color: #fafafa;
-      transition: color 200ms, background-color 200ms; }
+      box-shadow: inset 0 -3px 10px -4px black;
+      transition: color 200ms, background-color 200ms, box-shadow 300ms; }
+    .app-navbar .app-navlink:focus {
+      transition: box-shadow 300ms;
+      box-shadow: none; }
   .app-navbar .active {
     background-color: #43A047;
     color: #fafafa; }
 
 .about {
-  background: linear-gradient(to bottom, #43A047, #fafafa);
+  background: linear-gradient(to bottom, #43A047, #fafafa 80%);
   min-height: 300px;
   margin: 5px 0 50px;
-  padding-top: 5px; }
+  padding-top: 50px; }
 
 .about-title {
   font-size: 30px;
@@ -53,7 +68,7 @@ body {
   width: 90%;
   margin: 0 auto;
   background-color: #fafafa;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
 
 .about-inner-flexbox {
   display: flex;
@@ -67,12 +82,12 @@ body {
   display: none; }
 
 .about-image {
-  height: 300px;
+  height: auto;
   width: 300px;
   padding: 8px;
   margin: 20px;
   background-color: #fafafa;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
 
 .about-body {
   margin: 50px;
@@ -84,10 +99,13 @@ body {
   border-radius: 4px; }
 
 .projects {
-  background: linear-gradient(to bottom, #43A047, #fafafa);
+  background: linear-gradient(to bottom, #43A047, #fafafa 80%);
   min-height: 300px;
   margin: 5px 0 50px;
-  padding-top: 5px; }
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
 
 .projects-title {
   font-size: 30px;
@@ -95,11 +113,45 @@ body {
   font-family: "Roboto", sans-serif;
   color: #fafafa; }
 
+.projects-link {
+  text-decoration: none; }
+
+.project {
+  display: flex;
+  margin: 0 30px 60px;
+  width: 450px;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fafafa;
+  color: #9e9e9e;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: color 300ms, box-shadow 300ms; }
+  .project:hover {
+    color: #43A047;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: color 300ms, box-shadow 300ms; }
+    .project:hover .project-image {
+      box-shadow: none;
+      transition: box-shadow 300ms; }
+
+.project-image {
+  padding: 10px;
+  margin: 10px 10px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  width: 400px;
+  height: 400px;
+  transition: box-shadow 300ms; }
+
+.project-title {
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+  font-style: italic; }
+
 .contact {
-  background: linear-gradient(to bottom, #43A047, #fafafa);
+  background: linear-gradient(to bottom, #43A047, #fafafa 80%);
   min-height: 300px;
   margin: 5px 0 50px;
-  padding-top: 5px; }
+  padding-top: 50px; }
 
 .contact-title {
   font-size: 30px;
@@ -118,9 +170,9 @@ body {
   position: relative;
   color: #9e9e9e;
   margin: 20px;
+  padding: 2px;
   transition: border-bottom 200ms, color 200ms, padding-bottom 200ms; }
   .footer-link:hover {
-    padding-bottom: 2px;
     border-bottom: 3px solid #43A047;
     color: #43A047;
     transition: border-bottom 200ms, color 200ms, padding-bottom 200ms; }

@@ -10,9 +10,9 @@
   position: relative;
   color: $grey;
   margin: 20px;
+  padding: 2px;
   transition: border-bottom 200ms, color 200ms, padding-bottom 200ms;
   &:hover {
-    padding-bottom: 2px;
     border-bottom: 3px solid $green;
     color: $green;
     transition: border-bottom 200ms, color 200ms, padding-bottom 200ms;

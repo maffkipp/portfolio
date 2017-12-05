@@ -1,10 +1,35 @@
 import React, { Component } from 'react';
+import Project from './Project.js';
+import { Link } from 'react-router-dom';
+
+import projectData from '../projectData.js';
 
 class Projects extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      projects: projectData
+    }
+    this.populateProjects = this.populateProjects.bind(this);
+  }
+
+  populateProjects() {
+    let results = this.state.projects.map(project => {
+      return (
+        <Link className='projects-link' key={project.id} to={`/projects/${project.id}`}>
+          <Project data={project} />
+        </Link>
+      )
+    });
+    return results;
+  }
+
   render() {
+    let projectsArray = this.populateProjects();
+
     return (
       <div className='projects'>
-        <h2 className='projects-title'>Projects Component</h2>
+          {projectsArray}
       </div>
     )
   }

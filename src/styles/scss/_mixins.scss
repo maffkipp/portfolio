@@ -6,10 +6,10 @@
 }
 
 @mixin component-background {
-  background: linear-gradient(to bottom, $green, $white);
+  background: linear-gradient(to bottom, $green, $white 80%);
   min-height: 300px;
   margin: 5px 0 50px;
-  padding-top: 5px;
+  padding-top: 50px;
 }
 
 // primarily for nav links
@@ -21,7 +21,12 @@
   &:hover {
     background-color: $green;
     color: $white;
-    transition: color 200ms, background-color 200ms;
+    box-shadow: inset 0 -3px 10px -4px black;
+    transition: color 200ms, background-color 200ms, box-shadow 300ms;
+  }
+  &:focus {
+    transition: box-shadow 300ms;
+    box-shadow: none;
   }
 }
 
