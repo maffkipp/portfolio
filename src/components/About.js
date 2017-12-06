@@ -15,7 +15,6 @@ class About extends Component {
              well under pressure and improvise when the situation calls for
              it, skills I put to use building powerful, elegant web apps.</p>
           </div>
-          <h3 className='about-skills-title'>Skills:</h3>
         </div>
       </div>
     )

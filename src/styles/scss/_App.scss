@@ -50,3 +50,20 @@ body {
     color: $white;
   }
 }
+
+@media (max-width: 600px) {
+  .app-title-container {
+    width: 100%;
+    margin: 0 0 10px;
+    .app-title {
+      font-size: 34px;
+      text-align: center;
+    }
+  }
+  .app-navbar {
+    .app-navlink {
+      font-size: 20px;
+      padding: 6px 10px;
+    }
+  }
+}

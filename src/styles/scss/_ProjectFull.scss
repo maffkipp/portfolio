@@ -60,3 +60,33 @@
   color: $grey;
   line-height: 1.5;
 }
+
+@media (max-width: 800px) {
+  .project-full-flexbox {
+    flex-direction: column;
+  }
+  .project-full-image {
+    align-self: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-full-image {
+    width: 250px;
+    height: 250px;
+    margin: 5px;
+  }
+  .project-full-inner-container {
+    margin: 0 20px;
+  }
+  .project-full-title {
+    font-size: 30px;
+  }
+  .project-full-about {
+    font-size: 16px;
+    padding-top: 10px;
+  }
+  .project-full-details {
+    font-size: 14px;
+  }
+}

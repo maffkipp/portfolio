@@ -33,3 +33,14 @@
   font-family: $body-font;
   font-style: italic;
 }
+
+@media (max-width: 600px) {
+  .project {
+    width: 300px;
+    margin: 0 5px 30px;
+  }
+  .project-image {
+    width: 250px;
+    height: 250px;
+  }
+}

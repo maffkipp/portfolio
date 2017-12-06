@@ -2,6 +2,45 @@
   @include component-background;
 }
 
-.contact-title {
-  @include component-title;
+.contact-container {
+  width: 90%;
+  margin: 0 auto;
+  background-color: $white;
+  @include box-shadow(3);
+  padding: 20px 0;
 }
+
+.contact-body {
+  font-size: 20px;
+  font-family: $body-font;
+  color: $grey;
+  padding: 20px 50px;
+  font-style: italic;
+}
+
+.contact-info {
+  font-size: 18px;
+  font-family: $body-font;
+  color: $green;
+  padding: 5px 50px;
+}
+
+.contact-download {
+  display: inline-block;
+  font-size: 18px;
+  font-family: $title-font;
+  color: $white;
+  background-color: $green;
+  padding: 10px;
+  text-decoration: none;
+  margin: 10px 50px 30px;
+  transition: color 200ms, background-color 200ms;
+  &:hover {
+    color: $green;
+    background-color: $white;
+    padding: 7px;
+    border: 3px solid $green;
+    transition: color 200ms, background-color 200ms;
+  }
+}
+

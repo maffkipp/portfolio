@@ -14,6 +14,7 @@ class ProjectFull extends Component {
       details: ''
     }
     this.getDataFromId = this.getDataFromId.bind(this);
+    this.setDataToState = this.setDataToState.bind(this);
   }
 
   componentWillMount() {
@@ -25,14 +26,17 @@ class ProjectFull extends Component {
     const project = projectData.filter(entry => {
       return entry.id === pageId;
     });
-    console.log(project);
+    this.setDataToState(project);
+  }
+
+  setDataToState(data) {
     this.setState({
-      title: project[0].title,
-      image: project[0].image,
-      url: project[0].url,
-      github: project[0].github,
-      about: project[0].about,
-      details: project[0].details
+      title: data[0].title,
+      image: data[0].image,
+      url: data[0].url,
+      github: data[0].github,
+      about: data[0].about,
+      details: data[0].details
     });
   }
 
@@ -44,10 +48,10 @@ class ProjectFull extends Component {
             <img className='project-full-image' src={this.state.image} alt={this.state.title} />
             <div className='project-full-inner-container'>
               <h1 className='project-full-title'>{this.state.title}</h1>
-              <a className='project-full-link' href={this.state.url} target='_blank'>
+              <a className='project-full-link' href={this.state.url} target='_blank' rel="noopener noreferrer">
                 <span className='fa fa-link fa-3x'></span>
               </a>
-              <a className='project-full-link' href={this.state.github} target='_blank'>
+              <a className='project-full-link' href={this.state.github} target='_blank' rel="noopener noreferrer">
                 <span className='fa fa-github fa-3x'></span>
               </a>
               <p className='project-full-about'>{this.state.about}</p>
