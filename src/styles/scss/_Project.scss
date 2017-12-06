@@ -1,7 +1,7 @@
 .project {
   display: flex;
   margin: 0 30px 60px;
-  width: 450px;
+  width: 400px;
   flex-direction: column;
   align-items: center;
   background-color: $white;
@@ -23,8 +23,8 @@
   padding: 10px;
   margin: 10px 10px 0;
   @include box-shadow(1);
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
   transition: box-shadow 300ms;
 }
 

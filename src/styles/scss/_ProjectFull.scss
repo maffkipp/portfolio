@@ -1,0 +1,62 @@
+.project-full {
+  @include component-background;
+}
+
+.project-full-container {
+  width: 90%;
+  margin: 0 auto;
+  background-color: $white;
+  @include box-shadow(3);
+}
+
+.project-full-flexbox {
+  display: flex;
+  padding: 20px 0;
+}
+
+.project-full-image {
+  width: 400px;
+  height: 400px;
+  margin: 20px;
+  padding: 10px;
+  @include box-shadow(1);
+}
+
+.project-full-inner-container {
+  margin: 0 40px;
+}
+
+.project-full-title {
+  font-family: $title-font;
+  color: $green;
+  font-size: 40px;
+}
+
+.project-full-link {
+  color: $grey;
+  padding: 10px;
+  margin-right: 10px;
+  transition: color 200ms, padding-bottom 200ms, border-bottom 200ms;
+  &:hover {
+    color: $green;
+    padding-bottom: 7px;
+    border-bottom: 3px solid $green;
+    transition: color 200ms, padding-bottom 200ms, border-bottom 200ms;
+  }
+}
+
+.project-full-about {
+  font-family: $body-font;
+  font-size: 20px;
+  color: $green;
+  padding-top: 20px;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.project-full-details {
+  font-family: $body-font;
+  font-size: 16px;
+  color: $grey;
+  line-height: 1.5;
+}

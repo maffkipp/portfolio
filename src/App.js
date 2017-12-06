@@ -3,7 +3,8 @@ import {
   BrowserRouter as Router,
   NavLink,
   Switch,
-  Route
+  Route,
+  Redirect
 } from 'react-router-dom';
 
 import Home from './components/Home.js';
@@ -20,10 +21,8 @@ class App extends Component {
         <Router>
           <div className='router-container'>
             <div className='app-title-container'>
-              <NavLink exact to='/' className='app-title-link'>
-                <h1 className='app-title'>Wesley Maffly-Kipp</h1>
-                <p className='app-subtitle'>Full-Stack Web Developer</p>
-              </NavLink>
+              <h1 className='app-title'>Wesley Maffly-Kipp</h1>
+              <p className='app-subtitle'>Full-Stack Web Developer</p>
             </div>
             <nav className='app-navbar'>
               <NavLink to='/about' className='app-navlink'>About Me</NavLink>
@@ -31,7 +30,7 @@ class App extends Component {
               <NavLink to='/contact' className='app-navlink'>Contact</NavLink>
             </nav>
             <Switch>
-              <Route exact path='/' component={Home} />
+              <Route exact path='/' component={() => <Redirect to='/projects' />} />
               <Route path='/about' component={About} />
               <Route exact path='/projects' component={Projects} />
               <Route path='/contact' component={Contact} />

@@ -8,7 +8,9 @@ class ProjectFull extends Component {
     this.state = {
       title: '',
       image: '',
-      description: '',
+      url: '',
+      github: '',
+      about: '',
       details: ''
     }
     this.getDataFromId = this.getDataFromId.bind(this);
@@ -27,7 +29,9 @@ class ProjectFull extends Component {
     this.setState({
       title: project[0].title,
       image: project[0].image,
-      description: project[0].description,
+      url: project[0].url,
+      github: project[0].github,
+      about: project[0].about,
       details: project[0].details
     });
   }
@@ -35,10 +39,22 @@ class ProjectFull extends Component {
   render() {
     return (
       <div className='project-full'>
-        <h1>{this.state.title}</h1>
-        <img src={this.state.image} alt={this.state.title} />
-        <p>{this.state.description}</p>
-        <p>{this.state.details}</p>
+        <div className='project-full-container'>
+          <div className='project-full-flexbox'>
+            <img className='project-full-image' src={this.state.image} alt={this.state.title} />
+            <div className='project-full-inner-container'>
+              <h1 className='project-full-title'>{this.state.title}</h1>
+              <a className='project-full-link' href={this.state.url} target='_blank'>
+                <span className='fa fa-link fa-3x'></span>
+              </a>
+              <a className='project-full-link' href={this.state.github} target='_blank'>
+                <span className='fa fa-github fa-3x'></span>
+              </a>
+              <p className='project-full-about'>{this.state.about}</p>
+              <p className='project-full-details'>{this.state.details}</p>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
