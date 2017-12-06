@@ -59,9 +59,11 @@ body {
     .app-title-container .app-title {
       font-size: 34px;
       text-align: center; }
+    .app-title-container .app-subtitle {
+      text-align: center; }
   .app-navbar .app-navlink {
-    font-size: 20px;
-    padding: 6px 10px; } }
+    font-size: 22px;
+    padding: 7px 5px; } }
 
 .about {
   background: linear-gradient(to bottom, #43A047, #fafafa 80%);
@@ -98,8 +100,7 @@ body {
   font-family: "Lato", sans-serif;
   color: #9e9e9e;
   line-height: 2;
-  font-style: italic;
-  font-size: 20px;
+  font-size: 18px;
   border-radius: 4px; }
 
 @media (max-width: 800px) {
@@ -226,7 +227,7 @@ body {
   color: #9e9e9e;
   line-height: 1.5; }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .project-full-flexbox {
     flex-direction: column; }
   .project-full-image {
@@ -289,6 +290,17 @@ body {
     padding: 7px;
     border: 3px solid #43A047;
     transition: color 200ms, background-color 200ms; }
+
+@media (max-width: 600px) {
+  .contact-body {
+    font-size: 16px;
+    padding: 10px 30px; }
+  .contact-info {
+    font-size: 14px;
+    padding: 5px 30px; }
+  .contact-download {
+    font-size: 14px;
+    margin: 10px 30px 30px; } }
 
 .footer {
   border-top: 1px solid #9e9e9e;

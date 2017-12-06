@@ -9,11 +9,17 @@ class About extends Component {
             <img  className='about-image'
                   src={require('../images/headshot.jpg')}
                   alt='Portrait'/>
-            <p className='about-body'>I am a full stack web developer with
-             a flair for creativity and outside-of-the-box problem solving.
-             My experience as a musician has given me the ability to perform
-             well under pressure and improvise when the situation calls for
-             it, skills I put to use building powerful, elegant web apps.</p>
+            <div className='about-body'>
+              <p>I am a full-stack web developer
+              based out of Austin, Texas. I focus on front-end development
+              with Javascript, HTML, CSS, Sass, and React, although I am also proficient
+              with back-end technologies such as Node.js, Express, MongoDB, Python,
+              and Nginx.</p>
+              <p>I love working with web technologies because they require a unique
+              combination of technical discipline and creative passion. In my free
+              time I perform and record music, and I hope to apply the skills I have
+              learned as a musician towards my career as a web developer.</p>
+            </div>
           </div>
         </div>
       </div>

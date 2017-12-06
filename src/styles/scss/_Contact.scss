@@ -44,3 +44,18 @@
   }
 }
 
+@media (max-width: 600px) {
+  .contact-body {
+    font-size: 16px;
+    padding: 10px 30px;
+  }
+  .contact-info {
+    font-size: 14px;
+    padding: 5px 30px;
+  }
+  .contact-download {
+    font-size: 14px;
+    margin: 10px 30px 30px;
+  }
+}
+
