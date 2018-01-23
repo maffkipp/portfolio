@@ -1,4 +1,5 @@
 import petesPedals from './images/petes-pedals.png';
+import bogbody from './images/bogbody.png';
 import myTravels from './images/my-travels.png';
 import ticTacToe from './images/tic-tac-toe.png';
 import podster from './images/podster.png';
@@ -15,8 +16,17 @@ const projectData = [
     details: "This project was built using primarily React and Contentful CMS. This combination allowed me full control over the layout while still affording the client all the benefits of a modern CMS. I looked to Material Design for inspiration for the layout, colors, and fonts; I also used react-images for the photo lightbox and moment.js for date parsing."
   },
   {
-    title: "My Travels",
+    title: "Bogbody",
     id: "02",
+    image: bogbody,
+    url: "https://www.bogbody.band/",
+    github: "https://github.com/maffkipp/bogbody_v2",
+    about: "This is a website built for one of the bands I play with in Austin. I wanted to make a simple, elegant site that served as a hub for information and media related to the band.",
+    details: "I used this project as an opportunity to dive into using webpack as a build tool, as I previously had not had the opportunity to use it outside the React ecosystem. I used babel for ES6 support, and I used Sass to write my stylesheets. I also used animate.css for simple animations along with smooth-scroll."
+  },
+  {
+    title: "My Travels",
+    id: "03",
     image: myTravels,
     url: "http://my-travels-log.herokuapp.com/",
     github: "https://github.com/maffkipp/my_travels_log",
@@ -25,7 +35,7 @@ const projectData = [
   },
   {
     title: "Tic Tac Toe",
-    id: "03",
+    id: "04",
     image: ticTacToe,
     url: "https://tic-tac-toe-maffkipp.herokuapp.com/",
     github: "https://github.com/maffkipp/tic-tac-toe/tree/wes_lab",
@@ -34,7 +44,7 @@ const projectData = [
   },
   {
     title: "Podster",
-    id: "04",
+    id: "05",
     image: podster,
     url: "https://podster.mattray.io/",
     github: "https://github.com/MattRay0295/podcast-app",
