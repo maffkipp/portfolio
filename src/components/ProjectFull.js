@@ -1,18 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import projectData from '../projectData.js';
+import projectData from "../projectData.js";
 
+// Full page description of a single project
 class ProjectFull extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: '',
-      image: '',
-      url: '',
-      github: '',
-      about: '',
-      details: ''
-    }
+      title: "",
+      image: "",
+      url: "",
+      github: "",
+      about: "",
+      details: ""
+    };
     this.getDataFromId = this.getDataFromId.bind(this);
     this.setDataToState = this.setDataToState.bind(this);
   }
@@ -22,6 +23,7 @@ class ProjectFull extends Component {
   }
 
   getDataFromId() {
+    // gets ID from url and passes matching datapoint to setDataToState
     const pageId = this.props.propData.match.params.id;
     const project = projectData.filter(entry => {
       return entry.id === pageId;
@@ -30,6 +32,7 @@ class ProjectFull extends Component {
   }
 
   setDataToState(data) {
+    // changes the state to match the given data
     this.setState({
       title: data[0].title,
       image: data[0].image,
@@ -42,25 +45,39 @@ class ProjectFull extends Component {
 
   render() {
     return (
-      <div className='project-full'>
-        <div className='project-full-container'>
-          <div className='project-full-flexbox'>
-            <img className='project-full-image' src={this.state.image} alt={this.state.title} />
-            <div className='project-full-inner-container'>
-              <h1 className='project-full-title'>{this.state.title}</h1>
-              <a className='project-full-link' href={this.state.url} target='_blank' rel="noopener noreferrer">
-                <span className='fa fa-link fa-3x'></span>
+      <div className="project-full">
+        <div className="project-full-container">
+          <div className="project-full-flexbox">
+            <img
+              className="project-full-image"
+              src={this.state.image}
+              alt={this.state.title}
+            />
+            <div className="project-full-inner-container">
+              <h1 className="project-full-title">{this.state.title}</h1>
+              <a
+                className="project-full-link"
+                href={this.state.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="fa fa-link fa-3x" />
               </a>
-              <a className='project-full-link' href={this.state.github} target='_blank' rel="noopener noreferrer">
-                <span className='fa fa-github fa-3x'></span>
+              <a
+                className="project-full-link"
+                href={this.state.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="fa fa-github fa-3x" />
               </a>
-              <p className='project-full-about'>{this.state.about}</p>
-              <p className='project-full-details'>{this.state.details}</p>
+              <p className="project-full-about">{this.state.about}</p>
+              <p className="project-full-details">{this.state.details}</p>
             </div>
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
