@@ -39,7 +39,9 @@ class ProjectFull extends Component {
       url: data[0].url,
       github: data[0].github,
       about: data[0].about,
-      details: data[0].details
+      details: data[0].details,
+      gallery: data[0].gallery,
+      photoIds: data[0].photoIds || []
     });
   }
 
@@ -48,29 +50,29 @@ class ProjectFull extends Component {
       <div className="project-full">
         <div className="project-full-container">
           <div className="project-full-flexbox">
-            <img
-              className="project-full-image"
-              src={this.state.image}
-              alt={this.state.title}
-            />
+            <img className="project-full-image" src={this.state.image} alt={this.state.title} />
             <div className="project-full-inner-container">
               <h1 className="project-full-title">{this.state.title}</h1>
-              <a
-                className="project-full-link"
-                href={this.state.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="fa fa-link fa-3x" />
-              </a>
-              <a
-                className="project-full-link"
-                href={this.state.github}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="fa fa-github fa-3x" />
-              </a>
+              {!this.state.gallery && (
+                <div>
+                  <a
+                    className="project-full-link"
+                    href={this.state.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span className="fa fa-link fa-3x" />
+                  </a>
+                  <a
+                    className="project-full-link"
+                    href={this.state.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span className="fa fa-github fa-3x" />
+                  </a>
+                </div>
+              )}
               <p className="project-full-about">{this.state.about}</p>
               <p className="project-full-details">{this.state.details}</p>
             </div>
